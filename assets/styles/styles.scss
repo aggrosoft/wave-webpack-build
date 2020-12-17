@@ -1,0 +1,34 @@
+/*! purgecss start ignore */
+@import './node_modules/flexslider/flexslider';
+@import './node_modules/photoswipe/dist/photoswipe';
+/*! purgecss end ignore */
+
+@import '../wave/build/scss/variables';
+
+@import './node_modules/bootstrap/scss/bootstrap';
+
+@import '../wave/build/scss/layout/base';
+@import '../wave/build/scss/layout/header';
+@import '../wave/build/scss/layout/footer';
+
+@import '../wave/build/scss/form/fieldset/user_shipping';
+@import '../wave/build/scss/form/wishlist_publish';
+@import '../wave/build/scss/form/recommendation_add';
+
+@import '../wave/build/scss/page/details/details';
+@import '../wave/build/scss/page/checkout/order';
+@import '../wave/build/scss/page/compare/compare';
+@import '../wave/build/scss/page/account/inc/account_menu';
+@import '../wave/build/scss/page/list/list';
+@import '../wave/build/scss/page/err-404/err-404';
+
+@import '../wave/build/scss/widget/manufacturersslider';
+@import '../wave/build/scss/widget/promoslider';
+@import '../wave/build/scss/widget/breadcrumb';
+@import '../wave/build/scss/widget/product/list';
+@import '../wave/build/scss/widget/locator/paging';
+@import '../wave/build/scss/widget/locator/attributes';
+@import '../wave/build/scss/widget/reviews/rating';
+@import '../wave/build/scss/widget/reviews/reviews';
+@import '../wave/build/scss/widget/minibasket/minibasket';
+@import '../wave/build/scss/widget/sidebar/recommendation';

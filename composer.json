@@ -1,0 +1,19 @@
+{
+  "name": "aggrosoft/wave-webpack-build",
+  "type": "project",
+  "description": "Build Oxid eShop Wave theme using webpack",
+  "license": "MIT",
+  "version": "1.0.0",
+  "config": {
+    "preferred-install": "source"
+  },
+  "require-dev": {
+    "oxid-esales/wave-theme": "v1.5.0"
+  },
+  "authors": [
+    {
+      "name": "Alexander Kludt",
+      "homepage": "https://github.com/aggrosoft"
+    }
+  ]
+}

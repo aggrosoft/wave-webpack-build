@@ -1,0 +1,67 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "9a9f50f53ae9c7d500441e0ef0d97928",
+    "packages": [
+        {
+            "name": "oxid-esales/wave-theme",
+            "version": "v1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/OXID-eSales/wave-theme.git",
+                "reference": "62256ac7714768584f5fb1664423fba6a283192f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/OXID-eSales/wave-theme/zipball/62256ac7714768584f5fb1664423fba6a283192f",
+                "reference": "62256ac7714768584f5fb1664423fba6a283192f",
+                "shasum": ""
+            },
+            "type": "oxideshop-theme",
+            "extra": {
+                "oxideshop": {
+                    "target-directory": "wave",
+                    "assets-directory": "out/wave",
+                    "blacklist-filter": [
+                        "build/**/*",
+                        ".gitignore",
+                        ".gitattributes",
+                        "CHANGELOG.md",
+                        "composer.json",
+                        "CONTRIBUTING.md",
+                        "Gruntfile.js",
+                        "package.json",
+                        "package-lock.json"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-only"
+            ],
+            "description": "This is Wave Theme for OXID eShop.",
+            "homepage": "https://www.oxid-esales.com/en/home.html",
+            "keywords": [
+                "OXID",
+                "eshop",
+                "themes"
+            ],
+            "support": {
+                "source": "https://github.com/OXID-eSales/wave-theme/tree/v1.5.0"
+            },
+            "time": "2020-12-04T12:57:15+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.0.0"
+}
