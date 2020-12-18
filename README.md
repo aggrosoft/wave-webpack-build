@@ -3,7 +3,7 @@ Build Oxid eShop Wave theme using webpack
 
 ## Installation
 
-`composer require aggrosoft/wave-webpack-build`
+`git clone https://github.com/aggrosoft/wave-webpack-build.git`
 
 `npm install`
 
