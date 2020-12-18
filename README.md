@@ -13,7 +13,7 @@ Build Oxid eShop Wave theme using webpack
 
 Modify everything in `assets` folder to your needs, then  run the following command to build the assets in `public` folder
 
-`npm run build:dev`
+`npm run build:prod`
 
 For CSS purging to work correctly `assets/wave/tpl` should be a copy of your template. 
 Will include child theme and other base theme support soon.
