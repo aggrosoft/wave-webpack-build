@@ -2,6 +2,7 @@ var Encore = require('@symfony/webpack-encore');
 var PurgeCssPlugin = require('purgecss-webpack-plugin');
 var glob = require('glob-all');
 var path = require('path');
+const webpack = require('webpack');
 
 // Manually configure the runtime environment if not already configured yet by the "encore" command.
 // It's useful when you use tools that rely on webpack.config.js file.
@@ -33,6 +34,10 @@ Encore
       path.join(__dirname, 'assets/wave/tpl/**/*.tpl')
     ])
   }))
+  .addPlugin(new webpack.ProvidePlugin({
+    PhotoSwipe: 'photoswipe',
+    PhotoSwipeUI_Default: 'photoswipe/src/js/ui/photoswipe-ui-default.js'
+  }))
   /*
    * ENTRY CONFIG
    *
@@ -43,6 +48,8 @@ Encore
    * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
    */
   .addEntry('main', './assets/app.js')
+  .addEntry('details', './assets/js/details.js')
+  .addEntry('checkout', './assets/js/checkout.js')
   //.addEntry('page2', './assets/page2.js')
 
   // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
