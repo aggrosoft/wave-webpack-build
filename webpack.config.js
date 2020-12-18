@@ -14,7 +14,7 @@ Encore
   // directory where compiled assets will be stored
   .setOutputPath('public/out/wave/src/')
   // public path used by the web server to access the output path
-  .setPublicPath('/out/wave/src')
+  .setPublicPath('/')
   .configureFilenames({
     js: 'js/[name].js',
     css: 'css/[name].css',
