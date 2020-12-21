@@ -11,16 +11,20 @@ Build Oxid eShop Wave theme using webpack
 
 ## Usage
 
-Modify everything in `assets` folder to your needs, then  run the following command to build the assets in `public` folder
+Copy `.env.dist` to `.env` and change parameters accordingly.
+
+Clone `assets/child/example/` and adjust to your template name.
+
+Modify everything in `assets/child/[yourtheme]` folder to your needs, then  run the following command to build the assets in `public` folder
 
 `npm run build:prod`
 
-For CSS purging to work correctly `assets/wave/tpl` should be a copy of your template. 
-Will include child theme and other base theme support soon.
+For CSS purging to work correctly `assets/child/[yourtheme]/tpl` should contain a copy of your template files.
 
 ## Deployment
 
-Contents of `public` folder need to be deployed to your `source` folder.
+Contents of `public` folder need to be deployed to your `source` folder. Alternatively you can set AUTO_DEPLOY in .env
+and enter Ftp credentials to deploy to.
 
 ## But why?
 

@@ -1,5 +1,5 @@
 require('dotenv').config()
-const fs = require("fs");
+
 var path = require('path');
 
 if (!process.env.CHILD_THEME) {
@@ -47,6 +47,13 @@ Encore
     PhotoSwipe: 'photoswipe',
     PhotoSwipeUI_Default: 'photoswipe/src/js/ui/photoswipe-ui-default.js'
   }))
+  .addPlugin({
+    apply: (compiler) => {
+      compiler.hooks.afterEmit.tap('AfterEmitPlugin', (compilation) => {
+        console.log('After emit, auto deploy!')
+      });
+    }
+  })
   /*
    * ENTRY CONFIG
    *
@@ -75,7 +82,7 @@ Encore
    * list of features, see:
    * https://symfony.com/doc/current/frontend.html#adding-more-features
    */
-  .cleanupOutputBeforeBuild()
+  //.cleanupOutputBeforeBuild()
   .enableBuildNotifications()
   .enableSourceMaps(!Encore.isProduction())
   // enables hashed filenames (e.g. app.abc123.css)
