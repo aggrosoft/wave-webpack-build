@@ -22,13 +22,14 @@
     "photoswipe": "^4.1.3",
     "dotenv": "^8.2.0",
     "ftp-deploy": "^2.4.0",
-    "chalk": "^4.1.0"
+    "chalk": "^4.1.0",
+    "inquirer": "^7.3.3"
   },
   "scripts": {
-    "wave:init": "node init.js",
+    "wave:init": "node scripts/init",
     "build:dev": "encore dev",
     "build:prod": "encore production",
-    "deploy": "node deploy.js",
+    "deploy": "node scripts/deploy",
     "build-deploy": "npm run build:prod && npm run deploy"
   }
 }
