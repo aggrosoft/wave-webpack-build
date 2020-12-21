@@ -4,6 +4,7 @@ import {
   faCircle,
   faAngleDown,
   faAngleRight,
+  faAngleLeft,
   faCaretDown,
   faCaretRight,
   faCaretLeft,
@@ -26,6 +27,7 @@ library.add(faStar)
 library.add(faBars)
 library.add(faChevronCircleUp)
 library.add(faCircle)
+library.add(faAngleLeft)
 library.add(faAngleRight)
 library.add(faUser)
 library.add(faSearch)
