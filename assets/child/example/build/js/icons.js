@@ -1,5 +1,19 @@
 import { library, dom } from '@fortawesome/fontawesome-svg-core'
-import { faShoppingCart, faCircle, faAngleDown, faAngleRight, faCaretDown, faCaretRight, faCaretLeft, faRss, faStar, faBars, faChevronCircleUp, faUser } from '@fortawesome/free-solid-svg-icons'
+import {
+  faShoppingCart,
+  faCircle,
+  faAngleDown,
+  faAngleRight,
+  faCaretDown,
+  faCaretRight,
+  faCaretLeft,
+  faRss,
+  faStar,
+  faBars,
+  faChevronCircleUp,
+  faUser,
+  faSearch
+} from '@fortawesome/free-solid-svg-icons'
 
 // We are only using the user-astronaut icon
 library.add(faShoppingCart)
@@ -14,6 +28,7 @@ library.add(faChevronCircleUp)
 library.add(faCircle)
 library.add(faAngleRight)
 library.add(faUser)
+library.add(faSearch)
 
 // Replace any existing <i> tags with <svg> and set up a MutationObserver to
 // continue doing this as the DOM changes.

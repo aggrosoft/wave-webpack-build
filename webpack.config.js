@@ -47,13 +47,6 @@ Encore
     PhotoSwipe: 'photoswipe',
     PhotoSwipeUI_Default: 'photoswipe/src/js/ui/photoswipe-ui-default.js'
   }))
-  .addPlugin({
-    apply: (compiler) => {
-      compiler.hooks.afterEmit.tap('AfterEmitPlugin', (compilation) => {
-        console.log('After emit, auto deploy!')
-      });
-    }
-  })
   /*
    * ENTRY CONFIG
    *
