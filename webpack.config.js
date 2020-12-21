@@ -1,7 +1,15 @@
+require('dotenv').config()
+const fs = require("fs");
+var path = require('path');
+
+if (!process.env.CHILD_THEME) {
+  throw new Error('The CHILD_THEME environment variable was not set, please copy .env.dist to .env and set at least the CHILD_THEME variable')
+}
+
 var Encore = require('@symfony/webpack-encore');
 var PurgeCssPlugin = require('purgecss-webpack-plugin');
 var glob = require('glob-all');
-var path = require('path');
+
 const webpack = require('webpack');
 
 // Manually configure the runtime environment if not already configured yet by the "encore" command.
@@ -12,7 +20,7 @@ if (!Encore.isRuntimeEnvironmentConfigured()) {
 
 Encore
   // directory where compiled assets will be stored
-  .setOutputPath('public/out/wave/src/')
+  .setOutputPath('public/out/'+process.env.CHILD_THEME+'/src/')
   // public path used by the web server to access the output path
   .setPublicPath('/')
   .configureFilenames({
@@ -24,14 +32,15 @@ Encore
   // only needed for CDN's or sub-directory deploy
   //.setManifestKeyPrefix('build/')
   .copyFiles([{
-    from: 'assets/wave',
-    to: '../../../Application/views/wave/[path][name].[ext]',
+    from: 'assets/child/',
+    to: '../../../Application/views/[path][name].[ext]',
     includeSubdirectories: true,
     pattern: /.*/
   }])
   .addPlugin(new PurgeCssPlugin({
     paths: glob.sync([
-      path.join(__dirname, 'assets/wave/tpl/**/*.tpl')
+      path.join(__dirname, 'assets/wave/tpl/**/*.tpl'),
+      path.join(__dirname, 'assets/child/'+process.env.CHILD_THEME+'/tpl/**/*.tpl')
     ])
   }))
   .addPlugin(new webpack.ProvidePlugin({
@@ -47,9 +56,9 @@ Encore
    * Each entry will result in one JavaScript file (e.g. app.js)
    * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
    */
-  .addEntry('main', './assets/app.js')
-  .addEntry('details', './assets/js/details.js')
-  .addEntry('checkout', './assets/js/checkout.js')
+  .addEntry('main', './assets/child/'+process.env.CHILD_THEME+'/build/app.js')
+  .addEntry('details', './assets/child/'+process.env.CHILD_THEME+'/build/js/details.js')
+  .addEntry('checkout', './assets/child/'+process.env.CHILD_THEME+'/build/js/checkout.js')
   //.addEntry('page2', './assets/page2.js')
 
   // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
