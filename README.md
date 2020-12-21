@@ -23,8 +23,16 @@ For CSS purging to work correctly `assets/child/[yourtheme]/tpl` should contain 
 
 ## Deployment
 
-Contents of `public` folder need to be deployed to your `source` folder. Alternatively you can set AUTO_DEPLOY in .env
-and enter Ftp credentials to deploy to.
+Contents of `public` folder need to be deployed to your `source` folder. 
+
+Alternatively you can set AUTO_DEPLOY in .env  and enter Ftp credentials to deploy to. Run 
+
+`npm run deploy` or `npm run build-deploy`
+
+to build and/or deploy in single command
+
+
+## Dependencies
 
 You need to have [wave-webpack-build](https://github.com/aggrosoft/wave-webpack-build) module installed and enabled to 
 use the themes correctly.
