@@ -26,6 +26,9 @@ For CSS purging to work correctly `assets/child/[yourtheme]/tpl` should contain 
 Contents of `public` folder need to be deployed to your `source` folder. Alternatively you can set AUTO_DEPLOY in .env
 and enter Ftp credentials to deploy to.
 
+You need to have [wave-webpack-build](https://github.com/aggrosoft/wave-webpack-build) module installed and enabled to 
+use the themes correctly.
+
 ## But why?
 
 Wave theme is compiled using Grunt currently, it lacks effective tree shaking and css purging. This leads to badly

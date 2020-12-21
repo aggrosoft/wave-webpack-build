@@ -22,7 +22,7 @@ Encore
   // directory where compiled assets will be stored
   .setOutputPath('public/out/'+process.env.CHILD_THEME+'/src/')
   // public path used by the web server to access the output path
-  .setPublicPath('/')
+  .setPublicPath('/out/'+process.env.CHILD_THEME+'/src/')
   .configureFilenames({
     js: 'js/[name].js',
     css: 'css/[name].css',
