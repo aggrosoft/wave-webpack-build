@@ -3,9 +3,13 @@ Build Oxid eShop Wave theme using webpack
 
 ## Installation
 
+You will need [composer](https://www.get-composer.org) and [nodejs](https://www.nodejs.org) (npm) installed to use this
+
 `git clone https://github.com/aggrosoft/wave-webpack-build.git`
 
 `npm install`
+
+`composer install`
 
 `npm run wave:init`
 
