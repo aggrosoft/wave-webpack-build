@@ -13,7 +13,8 @@ import {
   faBars,
   faChevronCircleUp,
   faUser,
-  faSearch
+  faSearch,
+  faGift
 } from '@fortawesome/free-solid-svg-icons'
 
 // We are only using the user-astronaut icon
@@ -31,6 +32,7 @@ library.add(faAngleLeft)
 library.add(faAngleRight)
 library.add(faUser)
 library.add(faSearch)
+library.add(faGift)
 
 // Replace any existing <i> tags with <svg> and set up a MutationObserver to
 // continue doing this as the DOM changes.
