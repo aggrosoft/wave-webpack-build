@@ -1,14 +1,14 @@
 <?php
 
-include('../wave/theme.php');
+include(getShopBasePath().'/Application/views/wave/theme.php');
 
 /**
  * Theme Information
  */
-$aTheme = array_merge(
+$aTheme = array_replace_recursive(
     $aTheme,
     [
-        'id'          => 'example',
+        'id'          => 'next',
         'title'       => 'Webpack Example',
         'description' => 'Webpack example theme',
         'thumbnail'   => 'theme.jpg',
