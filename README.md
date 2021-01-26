@@ -38,7 +38,7 @@ to build and/or deploy in single command
 
 ## Dependencies
 
-You need to have [wave-webpack-build](https://github.com/aggrosoft/wave-webpack-build) module installed and enabled to 
+You need to have [oxid-webpack-theme-loader](https://github.com/aggrosoft/oxid-webpack-theme-loader) module installed and enabled to 
 use the themes correctly.
 
 ## But why?

@@ -11,6 +11,7 @@ var PurgeCssPlugin = require('purgecss-webpack-plugin');
 var glob = require('glob-all');
 
 const webpack = require('webpack');
+const DEPLOY_PATH = process.env.DEPLOY_PATH || 'public'
 
 // Manually configure the runtime environment if not already configured yet by the "encore" command.
 // It's useful when you use tools that rely on webpack.config.js file.
@@ -20,7 +21,7 @@ if (!Encore.isRuntimeEnvironmentConfigured()) {
 
 Encore
   // directory where compiled assets will be stored
-  .setOutputPath('public/out/'+process.env.CHILD_THEME+'/src/')
+  .setOutputPath(DEPLOY_PATH+'/out/'+process.env.CHILD_THEME+'/src/')
   // public path used by the web server to access the output path
   .setPublicPath('/out/'+process.env.CHILD_THEME+'/src/')
   .configureFilenames({
