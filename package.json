@@ -4,7 +4,8 @@
     "build:dev": "encore dev",
     "build:prod": "encore production",
     "deploy": "node scripts/deploy",
-    "wave:init": "node scripts/init"
+    "wave:init": "node scripts/init",
+    "shirtnetwork:init": "node scripts/shirtnetwork"
   },
   "browserslist": [
     "defaults"
@@ -13,6 +14,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@symfony/webpack-encore": "^0.33.0",
+    "axios": "^0.21.1",
     "autoprefixer": "^10.1.0",
     "bootstrap": "^4.5.3",
     "chalk": "^4.1.0",

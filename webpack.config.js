@@ -10,6 +10,7 @@ if (!process.env.CHILD_THEME) {
 var Encore = require('@symfony/webpack-encore');
 var PurgeCssPlugin = require('purgecss-webpack-plugin');
 var glob = require('glob-all');
+const axios = require('axios')
 
 const webpack = require('webpack');
 const DEPLOY_PATH = process.env.DEPLOY_PATH || 'public'
@@ -42,7 +43,8 @@ Encore
   .addPlugin(new PurgeCssPlugin({
     paths: glob.sync([
       path.join(__dirname, 'assets/wave/tpl/**/*.tpl'),
-      path.join(__dirname, 'assets/child/'+process.env.CHILD_THEME+'/tpl/**/*.tpl')
+      path.join(__dirname, 'assets/child/'+process.env.CHILD_THEME+'/tpl/**/*.tpl'),
+      path.join(__dirname, 'assets/child/'+process.env.CHILD_THEME+'/build/purgecss/**/*.*')
     ])
   }))
   .addPlugin(new webpack.ProvidePlugin({
@@ -88,20 +90,20 @@ Encore
     config.corejs = 3;
   })
 
-// enables Sass/SCSS support
-.enableSassLoader()
-.enableLessLoader()
-// enable post css
-.enablePostCssLoader()
-// uncomment if you use TypeScript
-//.enableTypeScriptLoader()
+  // enables Sass/SCSS support
+  .enableSassLoader()
+  .enableLessLoader()
+  // enable post css
+  .enablePostCssLoader()
+  // uncomment if you use TypeScript
+  //.enableTypeScriptLoader()
 
-// uncomment to get integrity="..." attributes on your script & link tags
-// requires WebpackEncoreBundle 1.4 or higher
-//.enableIntegrityHashes(Encore.isProduction())
+  // uncomment to get integrity="..." attributes on your script & link tags
+  // requires WebpackEncoreBundle 1.4 or higher
+  //.enableIntegrityHashes(Encore.isProduction())
 
-// uncomment if you're having problems with a jQuery plugin
-.autoProvidejQuery()
+  // uncomment if you're having problems with a jQuery plugin
+  .autoProvidejQuery()
 
 // uncomment if you use API Platform Admin (composer require api-admin)
 //.enableReactPreset()
