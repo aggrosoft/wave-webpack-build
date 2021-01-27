@@ -1,4 +1,6 @@
-import { library, dom } from '@fortawesome/fontawesome-svg-core'
+import { library, dom, config } from '@fortawesome/fontawesome-svg-core'
+config.searchPseudoElements = true
+
 import {
   faShoppingCart,
   faCircle,

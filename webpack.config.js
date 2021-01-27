@@ -1,6 +1,7 @@
 require('dotenv').config()
 
 var path = require('path');
+var fs = require('fs');
 
 if (!process.env.CHILD_THEME) {
   throw new Error('The CHILD_THEME environment variable was not set, please copy .env.dist to .env and set at least the CHILD_THEME variable')
@@ -60,7 +61,6 @@ Encore
   .addEntry('main', './assets/child/'+process.env.CHILD_THEME+'/build/app.js')
   .addEntry('details', './assets/child/'+process.env.CHILD_THEME+'/build/js/details.js')
   .addEntry('checkout', './assets/child/'+process.env.CHILD_THEME+'/build/js/checkout.js')
-  //.addEntry('page2', './assets/page2.js')
 
   // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
   .splitEntryChunks()
@@ -107,5 +107,10 @@ Encore
 //.enableReactPreset()
 //.addEntry('admin', './assets/admin.js')
 ;
+
+// Allow custom config per theme
+if (fs.existsSync('./assets/child/'+process.env.CHILD_THEME+'/build/webpack.config.js')) {
+  require('./assets/child/'+process.env.CHILD_THEME+'/build/webpack.config.js')
+}
 
 module.exports = Encore.getWebpackConfig();
