@@ -4,6 +4,12 @@ module.exports = {
     // but make sure you install these via yarn or npm!
 
     // add browserslist config to package.json (see below)
-    autoprefixer: {}
+    autoprefixer: {},
+    cssnano: {
+      preset: [
+        "default",
+        {"discardComments": {"removeAll": true}}
+      ]
+    }
   }
 }

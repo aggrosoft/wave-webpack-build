@@ -20,6 +20,7 @@
     "chalk": "^4.1.0",
     "copy-webpack-plugin": "^7.0.0",
     "core-js": "^3.8.1",
+    "cssnano": "^4.1.10",
     "dotenv": "^8.2.0",
     "flexslider": "^2.7.2",
     "fs-extra": "^9.0.1",
