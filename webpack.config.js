@@ -1,16 +1,17 @@
 require('dotenv').config()
 
-var path = require('path');
-var fs = require('fs');
+const path = require('path');
+const fs = require('fs');
 
 if (!process.env.CHILD_THEME) {
   throw new Error('The CHILD_THEME environment variable was not set, please copy .env.dist to .env and set at least the CHILD_THEME variable')
 }
 
-var Encore = require('@symfony/webpack-encore');
-var PurgeCssPlugin = require('purgecss-webpack-plugin');
-var glob = require('glob-all');
-const axios = require('axios')
+const Encore = require('@symfony/webpack-encore');
+const PurgeCssPlugin = require('purgecss-webpack-plugin');
+const ExtraWatchWebpackPlugin = require('extra-watch-webpack-plugin');
+const HookShellScriptPlugin = require('hook-shell-script-webpack-plugin');
+const glob = require('glob-all');
 
 const webpack = require('webpack');
 const DEPLOY_PATH = process.env.DEPLOY_PATH || 'public'
@@ -51,6 +52,12 @@ Encore
     PhotoSwipe: 'photoswipe',
     PhotoSwipeUI_Default: 'photoswipe/src/js/ui/photoswipe-ui-default.js'
   }))
+  .addPlugin(new ExtraWatchWebpackPlugin({
+    files: [ 'assets/child/'+process.env.CHILD_THEME+'/tpl/**/*.tpl' ],
+  }))
+  .addPlugin(new HookShellScriptPlugin({
+    afterEmit: ['npm run clear:tmp']
+  }))
   /*
    * ENTRY CONFIG
    *
@@ -78,7 +85,7 @@ Encore
    * list of features, see:
    * https://symfony.com/doc/current/frontend.html#adding-more-features
    */
-  //.cleanupOutputBeforeBuild()
+  // .cleanupOutputBeforeBuild(['*.tpl'])
   .enableBuildNotifications()
   .enableSourceMaps(!Encore.isProduction())
   // enables hashed filenames (e.g. app.abc123.css)
@@ -115,4 +122,7 @@ if (fs.existsSync('./assets/child/'+process.env.CHILD_THEME+'/build/webpack.conf
   require('./assets/child/'+process.env.CHILD_THEME+'/build/webpack.config.js')
 }
 
-module.exports = Encore.getWebpackConfig();
+let webpackConfig = Encore.getWebpackConfig()
+webpackConfig.resolve.symlinks = false
+
+module.exports = webpackConfig
