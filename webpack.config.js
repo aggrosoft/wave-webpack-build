@@ -35,12 +35,18 @@ Encore
   })
   // only needed for CDN's or sub-directory deploy
   //.setManifestKeyPrefix('build/')
-  .copyFiles([{
-    from: 'assets/child/',
-    to: '../../../Application/views/[path][name].[ext]',
-    includeSubdirectories: true,
-    pattern: /.*/
-  }])
+  .copyFiles([
+    {
+      from: 'assets/child/',
+      to: '../../../Application/views/[path][name].[ext]',
+      includeSubdirectories: true,
+      pattern: /.*/
+    },
+    {
+      from: './assets/child/'+process.env.CHILD_THEME+'/images/',
+      to: '../img/[path][name].[ext]'
+    }
+  ])
   .addPlugin(new PurgeCssPlugin({
     paths: glob.sync([
       path.join(__dirname, 'assets/wave/tpl/**/*.tpl'),
