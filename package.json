@@ -14,7 +14,8 @@
   ],
   "devDependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
-    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@fortawesome/free-solid-svg-icons": "^5.15.2",
+    "@fortawesome/free-brands-svg-icons": "^5.15.2",
     "@symfony/webpack-encore": "^0.33.0",
     "axios": "^0.21.1",
     "autoprefixer": "^10.1.0",

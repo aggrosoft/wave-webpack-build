@@ -20,6 +20,10 @@ import {
   faSync
 } from '@fortawesome/free-solid-svg-icons'
 
+import {
+  faPaypal
+} from '@fortawesome/free-brands-svg-icons'
+
 // We are only using the user-astronaut icon
 library.add(faShoppingCart)
 library.add(faAngleDown)
@@ -37,6 +41,7 @@ library.add(faUser)
 library.add(faSearch)
 library.add(faGift)
 library.add(faSync)
+library.add(faPaypal)
 
 // Replace any existing <i> tags with <svg> and set up a MutationObserver to
 // continue doing this as the DOM changes.

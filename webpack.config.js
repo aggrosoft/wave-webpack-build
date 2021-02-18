@@ -15,6 +15,7 @@ const glob = require('glob-all');
 
 const webpack = require('webpack');
 const DEPLOY_PATH = process.env.DEPLOY_PATH || 'public'
+const SHOP_PATH = path.resolve(__dirname, DEPLOY_PATH)
 
 // Manually configure the runtime environment if not already configured yet by the "encore" command.
 // It's useful when you use tools that rely on webpack.config.js file.
@@ -64,6 +65,10 @@ Encore
   .addPlugin(new HookShellScriptPlugin({
     afterEmit: ['npm run clear:tmp']
   }))
+  .addAliases({
+    shop: SHOP_PATH,
+    modules: SHOP_PATH + '/modules'
+  })
   /*
    * ENTRY CONFIG
    *
