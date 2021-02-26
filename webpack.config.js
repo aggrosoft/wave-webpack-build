@@ -48,13 +48,6 @@ Encore
       to: '../img/[path][name].[ext]'
     }
   ])
-  .addPlugin(new PurgeCssPlugin({
-    paths: glob.sync([
-      path.join(__dirname, 'assets/wave/tpl/**/*.tpl'),
-      path.join(__dirname, 'assets/child/'+process.env.CHILD_THEME+'/tpl/**/*.tpl'),
-      path.join(__dirname, 'assets/child/'+process.env.CHILD_THEME+'/build/purgecss/**/*.*')
-    ])
-  }))
   .addPlugin(new webpack.ProvidePlugin({
     PhotoSwipe: 'photoswipe',
     PhotoSwipeUI_Default: 'photoswipe/src/js/ui/photoswipe-ui-default.js'
@@ -127,6 +120,16 @@ Encore
 //.enableReactPreset()
 //.addEntry('admin', './assets/admin.js')
 ;
+
+if (process.env.USE_PURGECSS == 1) {
+   Encore.addPlugin(new PurgeCssPlugin({
+    paths: glob.sync([
+      path.join(__dirname, 'assets/wave/tpl/**/*.tpl'),
+      path.join(__dirname, 'assets/child/'+process.env.CHILD_THEME+'/tpl/**/*.tpl'),
+      path.join(__dirname, 'assets/child/'+process.env.CHILD_THEME+'/build/purgecss/**/*.*')
+    ])
+  }))
+}
 
 // Allow custom config per theme
 if (fs.existsSync('./assets/child/'+process.env.CHILD_THEME+'/build/webpack.config.js')) {
