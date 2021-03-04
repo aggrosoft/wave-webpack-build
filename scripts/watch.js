@@ -27,13 +27,26 @@ const resolveTemplateFile = function (path) {
 const copyFile = function (path) {
   fs.copySync(path, resolveTemplateFile(path))
   console.log('[COPY]', resolveTemplateFile(path))
+  clearTmp()
 }
 
 const deleteFile = function (path) {
   fs.removeSync(resolveTemplateFile(path))
   console.log('[DELETE]', resolveTemplateFile(path))
+  clearTmp()
 }
 
+const clearTmp = function () {
+  if (!process.env.TMP_FOLDER) {
+    return
+  }
+
+  if (!fs.pathExistsSync(path.join(process.env.TMP_FOLDER, 'smarty'))) {
+    return
+  }
+
+  fs.emptyDirSync(path.join(process.env.TMP_FOLDER, 'smarty'))
+}
 
 const watcher = chokidar.watch([themeDir + '/tpl', themeDir + '/images'], {
   ignored: /(^|[\/\\])\../, // ignore dotfiles
