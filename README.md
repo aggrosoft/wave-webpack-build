@@ -3,15 +3,15 @@ Build Oxid eShop Wave theme using webpack encore
 
 ## Installation
 
-You will need [composer](https://www.get-composer.org) and [nodejs](https://www.nodejs.org) (npm) installed to use this
+You will need [composer](https://www.get-composer.org) and [nodejs](https://www.nodejs.org) and [yarn](https://yarnpkg.com/getting-started/install) installed to use this
 
 `git clone https://github.com/aggrosoft/wave-webpack-build.git`
 
-`npm install`
+`yarn install`
 
 `composer install`
 
-`npm run wave:init`
+`yarn run wave:init`
 
 To be able to include module related css or anything else from your shop install we recommend symlinking DEPLOY_PATH with
 your shop source folder. This will also auto copy everything on builds to the shop.
@@ -39,15 +39,15 @@ Clone `assets/child/example/` and adjust to your template name.
 
 Modify everything in `assets/child/[yourtheme]` folder to your needs, then  run the following command to build the assets in `public` folder
 
-`npm run build:prod`
+`yarn run build:prod`
 
 While developing you can auto build / deploy with
 
-`npm run watch`
+`yarn run watch`
 
 If you only need to watch template changes use 
 
-`npm run watch:template`
+`yarn run watch:template`
 
 ## CSS Purging
 
@@ -61,7 +61,7 @@ Contents of `public` folder need to be deployed to your `source` folder.
 
 Alternatively you can set AUTO_DEPLOY in .env  and enter Ftp credentials to deploy to. Run 
 
-`npm run deploy` or `npm run build-deploy`
+`yarn run deploy` or `yarn run build-deploy`
 
 to build and/or deploy in single command
 

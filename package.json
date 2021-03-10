@@ -1,4 +1,6 @@
 {
+  "private": true,
+  "workspaces": ["assets/child/*"],
   "scripts": {
     "build-deploy": "npm run build:prod && npm run deploy",
     "build:dev": "encore dev",
@@ -14,10 +16,6 @@
     "defaults"
   ],
   "devDependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.32",
-    "@fortawesome/free-solid-svg-icons": "^5.15.2",
-    "@fortawesome/free-regular-svg-icons": "^5.15.2",
-    "@fortawesome/free-brands-svg-icons": "^5.15.2",
     "@symfony/webpack-encore": "^0.33.0",
     "axios": "^0.21.1",
     "autoprefixer": "^10.1.0",
