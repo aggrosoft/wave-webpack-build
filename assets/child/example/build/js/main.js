@@ -8,7 +8,7 @@ import 'bootstrap'
 
 import '../../../../wave/build/js/main.js'
 import '../../../../wave/build/js/pages/compare.js'
-import '../../../../wave/build/js/pages/review.js'
+import './wave/review.js'
 import '../../../../wave/build/js/pages/start.js'
 import 'jquery-ui/ui/widget.js'
 
