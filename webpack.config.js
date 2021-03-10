@@ -56,7 +56,7 @@ Encore
     files: [ 'assets/child/'+process.env.CHILD_THEME+'/tpl/**/*.tpl' ],
   }))
   .addPlugin(new HookShellScriptPlugin({
-    afterEmit: ['npm run clear:tmp']
+    afterEmit: ['yarn run clear:tmp']
   }))
   .addAliases({
     shop: SHOP_PATH,
