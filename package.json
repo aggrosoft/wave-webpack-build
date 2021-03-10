@@ -10,7 +10,8 @@
     "deploy": "node scripts/deploy",
     "wave:init": "node scripts/init",
     "clear:tmp": "node scripts/cleartmp",
-    "shirtnetwork:init": "node scripts/shirtnetwork"
+    "shirtnetwork:init": "node scripts/shirtnetwork",
+    "preinstall": "node -e \"if(process.env.npm_execpath.indexOf('yarn') === -1) throw new Error('You must use Yarn to install, not NPM')\""
   },
   "browserslist": [
     "defaults"
