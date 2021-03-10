@@ -37,7 +37,7 @@ Copy `.env.dist` to `.env` and change parameters accordingly.
 
 Clone `assets/child/example/` and adjust to your template name.
 
-Modify everything in `assets/child/[yourtheme]` folder to your needs, then  run the following command to build the assets in `public` folder
+Modify everything in `assets/child/[yourtheme]` folder to your needs, then run the following command to build the assets in `public` folder
 
 `yarn run build:prod`
 
