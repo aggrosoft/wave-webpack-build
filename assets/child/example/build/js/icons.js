@@ -24,6 +24,10 @@ import {
   faPaypal
 } from '@fortawesome/free-brands-svg-icons'
 
+import {
+  faStar as faStarRegular
+} from '@fortawesome/free-regular-svg-icons'
+
 // We are only using the user-astronaut icon
 library.add(faShoppingCart)
 library.add(faAngleDown)
@@ -32,6 +36,7 @@ library.add(faCaretRight)
 library.add(faCaretLeft)
 library.add(faRss)
 library.add(faStar)
+library.add(faStarRegular)
 library.add(faBars)
 library.add(faChevronCircleUp)
 library.add(faCircle)
