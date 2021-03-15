@@ -8,7 +8,7 @@ include(getShopBasePath().'/Application/views/wave/theme.php');
 $aTheme = array_replace_recursive(
     $aTheme,
     [
-        'id'          => 'example',
+        'id'          => 'glide',
         'title'       => 'Webpack Example',
         'description' => 'Webpack example theme',
         'thumbnail'   => 'theme.jpg',
