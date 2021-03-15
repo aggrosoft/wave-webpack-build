@@ -3,7 +3,8 @@ Build Oxid eShop Wave theme using webpack encore
 
 ## Installation
 
-You will need [composer](https://www.get-composer.org) and [nodejs](https://www.nodejs.org) and [yarn](https://yarnpkg.com/getting-started/install) installed to use this
+You will need [composer](https://www.get-composer.org) and [nodejs](https://www.nodejs.org) and [yarn](https://yarnpkg.com/getting-started/install) installed to use this.
+Run the following commands to get started.
 
 `git clone https://github.com/aggrosoft/wave-webpack-build.git`
 
@@ -35,9 +36,11 @@ You can then symlink your shop as easy as
 
 Copy `.env.dist` to `.env` and change parameters accordingly.
 
-Clone `assets/child/example/` and adjust to your template name.
+Clone `assets/child/example/` and adjust to your template name. There is also an more sophisticated template `assets/child/glide`
+which you can use as a starter.
 
-Modify everything in `assets/child/[yourtheme]` folder to your needs, then run the following command to build the assets in `public` folder
+Modify everything in `assets/child/[yourtheme]` folder to your needs. You must adjust `package.json` and `theme.php` with the
+correct template id. Then run the following command to build the assets in `public` folder
 
 `yarn run build:prod`
 
