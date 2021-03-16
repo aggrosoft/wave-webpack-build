@@ -1,11 +1,5 @@
 @import 'variables';
 
-/*! purgecss start ignore */
-@import '~flexslider/flexslider';
-@import 'flexslider-fontawesome';
-@import '~photoswipe/dist/photoswipe';
-/*! purgecss end ignore */
-
 @import '/assets/wave/build/scss/variables';
 
 @import '~bootstrap/scss/bootstrap';
@@ -37,5 +31,6 @@
 @import '/assets/wave/build/scss/widget/sidebar/recommendation';
 
 /*! purgecss start ignore */
+@import 'glide';
 @import 'styles';
 /*! purgecss end ignore */

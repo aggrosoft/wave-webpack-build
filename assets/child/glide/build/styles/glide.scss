@@ -1,0 +1,31 @@
+/* fontawesome cls prevention */
+i.fa, i.fas, i.far, i.fab {
+    min-width: 0.625em;
+    display: inline-block;
+}
+
+i.fa-search {
+    min-width: 1em;
+}
+
+i.fa-shopping-cart {
+    min-width: 1.125em;
+}
+
+/* top menus cls */
+.menu-dropdowns > .btn-group {
+    height: 36px;
+}
+
+/* slider caption */
+.glide__slide {
+    position: relative;
+}
+.glide__caption {
+    position: absolute;
+    right: 1em;
+    bottom: 1em;
+    left: 1em;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 0.5em;
+}
