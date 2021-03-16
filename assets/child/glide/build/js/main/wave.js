@@ -1,0 +1,3 @@
+global.Wave = {
+  initEvents: function() {}
+};

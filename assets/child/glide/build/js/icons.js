@@ -17,7 +17,8 @@ import {
   faUser,
   faSearch,
   faGift,
-  faSync
+  faSync,
+  faPencilAlt
 } from '@fortawesome/free-solid-svg-icons'
 
 import {
@@ -52,6 +53,7 @@ library.add(
   faSearch,
   faGift,
   faSync,
+  faPencilAlt,
   faPaypal,
   faFacebookF,
   faTwitter,

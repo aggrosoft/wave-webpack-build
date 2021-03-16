@@ -5,5 +5,14 @@ import Glide, { Controls, Breakpoints, Images, Swipe, Anchors } from '@glidejs/g
 const slider = document.getElementById('promo-carousel')
 
 if (slider) {
-    new Glide('#promo-carousel').mount({ Controls, Breakpoints, Images, Swipe, Anchors })
+    const glide = new Glide('#promo-carousel').mount({ Controls, Breakpoints, Images, Swipe, Anchors })
+
+    // Currently hiding body until fonts loaded to prevent layout shift, update glide when everything is loaded
+    const observer = new MutationObserver( function( mutations ){
+        if (document.documentElement.classList.contains('fontawesome-i2svg-complete')){
+            glide.update({})
+            observer.disconnect()
+        }
+    });
+    observer.observe( document.documentElement, { attributes: true, attributeFilter: ['class'] } );
 }

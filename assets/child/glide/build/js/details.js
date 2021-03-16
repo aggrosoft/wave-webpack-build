@@ -7,13 +7,9 @@ import '../../../../wave/out/wave/src/js/widgets/oxajax.min.js'
 import '../../../../wave/out/wave/src/js/widgets/oxarticlevariant.min.js'
 import '../../../../wave/out/wave/src/js/widgets/oxlistremovebutton.min.js'
 
-
-Wave = Wave || {};
-
- Wave.initDetailsEvents = function () {
-     
+global.Wave.initDetailsEvents = function () {
     initMorePics()
     initVariants()
     initRatings()
     setFirstVariant()
- };
+};

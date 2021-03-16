@@ -1,7 +1,7 @@
 [{assign var="oConfig" value=$oViewConf->getConfig()}]
 
 [{if $oView->morePics()}]
-<div class="glide" id="morePics">
+<div class="glide mb-2" id="morePics">
     <div class="glide__track" data-glide-el="track">
         <ul class="glide__slides my-auto">
             [{foreach from=$oView->getIcons() key="iPicNr" item="oArtIcon" name="sMorePics"}]
@@ -12,8 +12,8 @@
         </ul>
     </div>
     <div class="glide__arrows" data-glide-el="controls">
-        <button type="button" class="glide__arrow glide__arrow--left" data-glide-dir="<">&laquo;</button>
-        <button type="button" class="glide__arrow glide__arrow--right" data-glide-dir=">">&raquo;</button>
+        <button type="button" class="glide__arrow glide__arrow--left btn btn-primary" data-glide-dir="<">&laquo;</button>
+        <button type="button" class="glide__arrow glide__arrow--right btn btn-primary" data-glide-dir=">">&raquo;</button>
     </div>
 </div>
 
@@ -38,8 +38,8 @@
                         </ul>
                     </div>
                     <div class="glide__arrows" data-glide-el="controls">
-                        <button type="button" class="glide__arrow glide__arrow--left" data-glide-dir="<">&laquo;</button>
-                        <button type="button" class="glide__arrow glide__arrow--right" data-glide-dir=">">&raquo;</button>
+                        <button type="button" class="glide__arrow glide__arrow--left btn btn-primary" data-glide-dir="<">&laquo;</button>
+                        <button type="button" class="glide__arrow glide__arrow--right btn btn-primary" data-glide-dir=">">&raquo;</button>
                     </div>
                 </div>
             </div>

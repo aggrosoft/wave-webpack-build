@@ -1,22 +1,29 @@
 /* fontawesome cls prevention */
-i.fa, i.fas, i.far, i.fab {
-    min-width: 0.625em;
-    display: inline-block;
+body {
+    display: none;
 }
 
-i.fa-search {
-    min-width: 1em;
+.fontawesome-i2svg-active body {
+    display: initial;
 }
 
-i.fa-shopping-cart {
-    min-width: 1.125em;
+/* details picture cls - values should match picture settings */
+.details-picture {
+    min-height: 340px
 }
-
-/* top menus cls */
-.menu-dropdowns > .btn-group {
-    height: 36px;
+#morePics {
+    min-height: 87px;
 }
-
+.brandLogo {
+    min-height: 100px;
+}
+.stockFlag {
+    min-height: 14px;
+}
+.stockFlag .fa-circle {
+    min-height: 12px;
+    min-width: 14px;
+}
 /* slider caption */
 .glide__slide {
     position: relative;
@@ -28,4 +35,12 @@ i.fa-shopping-cart {
     left: 1em;
     background-color: rgba(255, 255, 255, 0.5);
     padding: 0.5em;
+}
+
+/* max height zoompic modal */
+#zoomModal .glide__slide {
+    max-height: calc(100vh - 240px);
+}
+#zoomModal .glide__slide img {
+    object-fit: contain;
 }

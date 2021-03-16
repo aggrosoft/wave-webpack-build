@@ -32,7 +32,12 @@ const initMorePics = function () {
         $('#zoomModal').on('hidden.bs.modal', function (e) {
             zoomPics.destroy()
         })
-    }    
+    }
+
+    $('.details-picture').on('click', function(ev) {
+        $('#zoomModal').modal('show')
+        ev.preventDefault()
+    })
 }
 
 export default initMorePics
