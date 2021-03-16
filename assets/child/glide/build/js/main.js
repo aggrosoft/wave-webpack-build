@@ -5,6 +5,7 @@ import 'bootstrap'
 
 import './main/lazyimages.js'
 import './main/mainnavigation.js'
+import './main/agcms.slideshow.js'
 import './start/promoslider.js'
 import './start/manufacturerslider.js'
 
