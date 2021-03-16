@@ -1,6 +1,4 @@
 import './icons.js'
-import 'jquery-unveil'
-
 import 'jq-bootstrap-validation/dist/jq.bootstrap.validation.min.js'
 
 import 'bootstrap'
