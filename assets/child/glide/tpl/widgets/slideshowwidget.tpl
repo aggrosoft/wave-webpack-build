@@ -1,6 +1,6 @@
 [{ assign var=settings value=$widget->getSettings() }]
 
-<div class="[{ $widget->agwidget__cssclasses->rawValue }] agcms-glide" style="[{$widget->getCssStyle()}]">
+<div class="[{ $widget->agwidget__cssclasses->rawValue }] agcms-glide glide" style="[{$widget->getCssStyle()}]">
     <div class="glide__track" data-glide-el="track">
         <ul class="glide__slides">
 
