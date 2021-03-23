@@ -25,5 +25,14 @@ if (slider) {
     })
 
     glide.mount({Controls, Breakpoints, Images, Swipe, Anchors, Autoplay})
+
+    // Currently hiding body until fonts loaded to prevent layout shift, update glide when everything is loaded
+    const observer = new MutationObserver( function( mutations ){
+        if (document.documentElement.classList.contains('fontawesome-i2svg-complete')){
+            glide.update({})
+            observer.disconnect()
+        }
+    });
+    observer.observe( document.documentElement, { attributes: true, attributeFilter: ['class'] } );
 }
 

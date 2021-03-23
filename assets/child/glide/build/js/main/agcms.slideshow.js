@@ -5,5 +5,13 @@ import Glide, { Controls, Breakpoints, Images, Swipe, Anchors } from '@glidejs/g
 const sliders = document.getElementsByClassName('agcms-glide')
 
 sliders.forEach(slider => {
-  new Glide(slider).mount({ Controls, Breakpoints, Images, Swipe, Anchors })
+  const glide = new Glide(slider).mount({ Controls, Breakpoints, Images, Swipe, Anchors })
+
+  const observer = new MutationObserver( function( mutations ){
+    if (document.documentElement.classList.contains('fontawesome-i2svg-complete')){
+      glide.update({})
+      observer.disconnect()
+    }
+  });
+  observer.observe( document.documentElement, { attributes: true, attributeFilter: ['class'] } );
 })
