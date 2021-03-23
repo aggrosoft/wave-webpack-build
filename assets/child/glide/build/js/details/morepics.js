@@ -19,6 +19,14 @@ const initMorePics = function () {
                 }
             }
         }).mount({ Controls, Breakpoints, Swipe, Images, Anchors, Clickable, ZoomPic })
+
+        const observer = new MutationObserver( function( mutations ){
+            if (document.documentElement.classList.contains('fontawesome-i2svg-complete')){
+                morePics.update({})
+                observer.disconnect()
+            }
+        });
+        observer.observe( document.documentElement, { attributes: true, attributeFilter: ['class'] } );
         
         let zoomPics
         
