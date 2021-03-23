@@ -2,6 +2,7 @@ import initMorePics from './details/morepics.js'
 import initVariants from './details/variants.js'
 import initRatings from './details/variants.js'
 import setFirstVariant from './details/firstvariant.js'
+import lazyLoader from './main/lazyimages.js'
 
 import '../../../../wave/out/wave/src/js/widgets/oxajax.min.js'
 import '../../../../wave/out/wave/src/js/widgets/oxarticlevariant.min.js'
@@ -12,4 +13,5 @@ global.Wave.initDetailsEvents = function () {
     initVariants()
     initRatings()
     setFirstVariant()
+    lazyLoader.update()
 };
