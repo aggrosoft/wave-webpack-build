@@ -12,7 +12,7 @@
             <a class="glide__slide-link" href="[{ $settings->getBannerLink($smarty.section.slides.index) }]">
             [{/if}]
             [{ if $settings->getBannerPicture($smarty.section.slides.index) }]
-            <img class="glide__slide-image" src="[{$settings->getBannerPictureUrl($smarty.section.slides.index)}]" />
+            <img class="glide__slide-image" src="[{$settings->getBannerPictureUrl($smarty.section.slides.index)}]" loading="lazy" />
             [{/if}]
             [{if $settings->getBannerText($smarty.section.slides.index)}]
             <div class="glide__slide-text">

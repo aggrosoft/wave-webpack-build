@@ -30,9 +30,13 @@ Encore
   .setPublicPath('/out/'+process.env.CHILD_THEME+'/src/')
   .configureFilenames({
     js: 'js/[name].js',
-    css: 'css/[name].css',
-    images: 'bg/[name].[ext]',
-    fonts: 'fonts/[name].[ext]'
+    css: 'css/[name].css'
+  })
+  .configureImageRule({
+    filename: 'bg/[name].[ext]'
+  })
+  .configureFontRule({
+    filename: 'fonts/[name].[ext]'
   })
   // only needed for CDN's or sub-directory deploy
   //.setManifestKeyPrefix('build/')
