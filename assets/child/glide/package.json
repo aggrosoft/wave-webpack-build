@@ -13,7 +13,7 @@
     "jquery": "^3.5.1",
     "jquery-ui": "^1.12.1",
     "vanilla-lazyload": "^17.3.1",
-    "less-loader": "^6.2.0",
+    "less-loader": "^8.0.0",
     "popper.js": "^1.16.1"
   }
 }
