@@ -9,8 +9,8 @@ $aTheme = array_replace_recursive(
     $aTheme,
     [
         'id'          => 'glide',
-        'title'       => 'Webpack Example',
-        'description' => 'Webpack example theme',
+        'title'       => 'Webpack Glide',
+        'description' => 'Webpack Glide theme',
         'thumbnail'   => 'theme.jpg',
         'version'     => '1.0.0',
         'author'      => '<a href="http://www.aggrosoft.de" title="Aggrosoft GmbH">Aggrosoft GmbH</a>',

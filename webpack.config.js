@@ -33,10 +33,12 @@ Encore
     css: 'css/[name].css'
   })
   .configureImageRule({
-    filename: 'bg/[name].[ext]'
+    filename: 'bg/[name][ext]',
+    type: 'asset/resource'
   })
   .configureFontRule({
-    filename: 'fonts/[name].[ext]'
+    filename: 'fonts/[name][ext]',
+    type: 'asset/resource'
   })
   // only needed for CDN's or sub-directory deploy
   //.setManifestKeyPrefix('build/')
@@ -142,5 +144,7 @@ if (fs.existsSync('./assets/child/'+process.env.CHILD_THEME+'/build/webpack.conf
 
 let webpackConfig = Encore.getWebpackConfig()
 webpackConfig.resolve.symlinks = false
+
+console.log(webpackConfig.module.rules)
 
 module.exports = webpackConfig
