@@ -145,6 +145,4 @@ if (fs.existsSync('./assets/child/'+process.env.CHILD_THEME+'/build/webpack.conf
 let webpackConfig = Encore.getWebpackConfig()
 webpackConfig.resolve.symlinks = false
 
-console.log(webpackConfig.module.rules)
-
 module.exports = webpackConfig
