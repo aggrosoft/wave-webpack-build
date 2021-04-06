@@ -15,6 +15,6 @@ for (const def of icons) {
   html += symbol + "\n"
 }
 
-html = '<defs>' + html + '</defs>'
+html = '<svg style="display:none"><defs>' + html + '</defs></svg>'
 
 fs.writeFileSync(themeDir + '/tpl/widget/icons.tpl', html)
