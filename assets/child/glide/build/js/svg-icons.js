@@ -1,6 +1,6 @@
 const solidIcons = require('@fortawesome/free-solid-svg-icons')
 
-export default [
+module.exports = [
   solidIcons.faPlus,
   solidIcons.faUser
 ]
