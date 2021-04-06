@@ -5,12 +5,7 @@ const path = require('path')
 const themeDir = path.resolve(__dirname + '/../assets/child/'+process.env.CHILD_THEME)
 
 const icon = require('@fortawesome/fontawesome-svg-core').icon
-const solidIcons = require('@fortawesome/free-solid-svg-icons')
-
-const icons = [
-  solidIcons.faPlus,
-  solidIcons.faUser
-]
+const icons = require( themeDir + 'build/js/svg-icons.js')
 
 let html = ''
 
