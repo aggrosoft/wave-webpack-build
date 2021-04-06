@@ -20,4 +20,6 @@ for (const def of icons) {
   html += symbol + "\n"
 }
 
-console.log(html)
+html = '<defs>' + html + '</defs>'
+
+fs.writeFileSync(themeDir + '/tpl/widget/icons.tpl', html)

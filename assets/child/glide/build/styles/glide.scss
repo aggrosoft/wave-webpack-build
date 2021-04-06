@@ -1,10 +1,19 @@
-/* fontawesome cls prevention */
+/* fontawesome cls prevention
 body {
     display: none;
 }
 
 .fontawesome-i2svg-active body {
     display: initial;
+}
+*/
+
+/* Use svg icons */
+.svg-icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    fill: currentColor
 }
 
 /* details picture cls - values should match picture settings */
