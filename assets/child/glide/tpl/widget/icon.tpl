@@ -1,0 +1,1 @@
+<svg class="svg-icon svg-inline--fa [{$classes}]" aria-hidden="true"><use xlink:href="#[{$icon}]"></use></svg>
