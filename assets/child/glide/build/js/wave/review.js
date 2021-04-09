@@ -1,10 +1,3 @@
-import { icon } from '@fortawesome/fontawesome-svg-core'
-import { faStar as faStarSolid } from '@fortawesome/free-solid-svg-icons'
-import { faStar as faStarRegular } from '@fortawesome/free-regular-svg-icons'
-
-const solid = icon(faStarSolid).html
-const regular = icon(faStarRegular).html
-
 $(function()
   {
     var $oReviewRating = $( '#reviewRating' );
@@ -18,9 +11,9 @@ $(function()
           var $this    = $( this ),
             $oParent = $this.parent();
 
-          $oParent.prevAll().find( '.fa-star' ).replaceWith(solid);
-          $oParent.nextAll().find( '.fa-star' ).replaceWith(regular);
-          $this.find( '.fa-star' ).replaceWith(solid);
+          $oParent.prevAll().find( '.svg-icon' ).find('use').attr('xlink:href', '#fas-star');
+          $oParent.nextAll().find( '.svg-icon' ).find('use').attr('xlink:href', '#far-star')
+          $this.find( '.svg-icon' ).find('use').attr('xlink:href', '#fas-star');
 
           $oRatingForm.find( '#recommListRating, #productRating' ).val( $oParent.attr( 'data-rate-value' ) );
         }

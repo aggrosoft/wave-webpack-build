@@ -1,4 +1,3 @@
-import './icons.js'
 import 'jq-bootstrap-validation/dist/jq.bootstrap.validation.min.js'
 
 import 'bootstrap'
