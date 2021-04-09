@@ -1,4 +1,5 @@
 require('dotenv').config()
+require('dotenv').config()
 
 const path = require('path');
 const fs = require('fs');
@@ -62,6 +63,7 @@ Encore
     files: [ 'assets/child/'+process.env.CHILD_THEME+'/tpl/**/*.tpl' ],
   }))
   .addPlugin(new HookShellScriptPlugin({
+    beforeRun: ['yarn run build:icons'],
     afterEmit: ['yarn run clear:tmp']
   }))
   .addAliases({
