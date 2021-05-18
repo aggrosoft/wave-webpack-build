@@ -1,0 +1,17 @@
+/* details picture cls - values should match picture settings */
+.details-picture {
+  min-height: 340px
+}
+#morePics {
+  min-height: 87px;
+}
+.brandLogo {
+  min-height: 100px;
+}
+.stockFlag {
+  min-height: 14px;
+}
+.stockFlag .fa-circle {
+  min-height: 12px;
+  min-width: 14px;
+}

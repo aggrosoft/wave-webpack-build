@@ -1,4 +1,5 @@
 const solidIcons = require('@fortawesome/free-solid-svg-icons')
+const regularIcons = require('@fortawesome/free-regular-svg-icons')
 
 module.exports = [
   solidIcons.faShoppingCart,
@@ -11,6 +12,7 @@ module.exports = [
   solidIcons.faCaretLeft,
   solidIcons.faRss,
   solidIcons.faStar,
+  regularIcons.faStar,
   solidIcons.faBars,
   solidIcons.faChevronCircleUp,
   solidIcons.faUser,

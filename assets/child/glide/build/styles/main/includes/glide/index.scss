@@ -1,0 +1,20 @@
+/* slider caption */
+.glide__slide {
+  position: relative;
+}
+.glide__caption {
+  position: absolute;
+  right: 1em;
+  bottom: 1em;
+  left: 1em;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 0.5em;
+}
+
+/* max height zoompic modal */
+#zoomModal .glide__slide {
+  max-height: calc(100vh - 240px);
+}
+#zoomModal .glide__slide img {
+  object-fit: contain;
+}

@@ -1,1 +1,1 @@
-import '../styles/designer.scss'
+import '../styles/designer/index.scss'
