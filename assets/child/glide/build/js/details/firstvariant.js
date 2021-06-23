@@ -8,7 +8,7 @@ export default function () {
         
         if (emptySelections.length === 1) {
             emptySelections.each(function() {
-                const val = $(this).next('.dropdown-menu').find('li:not(".disabled") > a').data('selection-id')
+                const val = $(this).closest('.dropdown').find('ul > li:not(".disabled") > a').data('selection-id')
                 $(this).val(val)
             })
             var form = $("form.js-oxWidgetReload");
