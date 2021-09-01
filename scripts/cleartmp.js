@@ -15,4 +15,5 @@ if (!fs.pathExistsSync(path.join(process.env.TMP_FOLDER, 'smarty'))) {
 
 console.info('Clearing tmp ' + process.env.TMP_FOLDER)
 
-fs.emptyDirSync(path.join(process.env.TMP_FOLDER, 'smarty'))
+fs.emptyDirSync(process.env.TMP_FOLDER)
+fs.mkdirSync(path.join(process.env.TMP_FOLDER, 'smarty'))
