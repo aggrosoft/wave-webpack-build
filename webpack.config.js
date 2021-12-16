@@ -12,7 +12,6 @@ const Encore = require('@symfony/webpack-encore');
 const PurgeCssPlugin = require('purgecss-webpack-plugin');
 const ExtraWatchWebpackPlugin = require('extra-watch-webpack-plugin');
 const HookShellScriptPlugin = require('hook-shell-script-webpack-plugin');
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 const globImporter = require('node-sass-glob-importer');
 const glob = require('glob-all');
@@ -68,16 +67,6 @@ Encore
   .addPlugin(new HookShellScriptPlugin({
     beforeRun: ['yarn run build:icons'],
     afterEmit: ['yarn run clear:tmp']
-  }))
-  .addPlugin(new CssMinimizerPlugin({
-    minimizerOptions: {
-      preset: [
-        'advanced',
-        {
-          discardComments: { removeAll: true }
-        },
-      ],
-    },
   }))
   .addAliases({
     shop: SHOP_PATH,
