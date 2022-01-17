@@ -8,7 +8,8 @@ const outDir = path.resolve(process.env.DEPLOY_PATH + '/out/')
 ;(async () => {
     for await (const f of readdir(outDir)) {
         const p = path.parse(f);
-        if (p.ext === '.png' || p.ext === '.jpeg' || p.ext === '.jpg') {
+        const ext = p.ext.toLowerCase();
+        if (ext === '.png' || ext === '.jpeg' || ext === '.jpg') {
             const newPath = p.dir + '/' + p.name + '.webp'
             if (!fs.existsSync(newPath)) {
                 console.log(f)
