@@ -58,6 +58,17 @@ For CSS purging to work correctly `assets/child/[yourtheme]/tpl` should contain 
 To enable this feature set `USE_PURGECSS=1` in .env file, this is still experimental as dynamic contents (CMS etc.)
 will not be picked up.
 
+## Webp Generator
+
+The module can convert all jpg and png images in your out folder to webp. Run the `yarn generate:webp` command.
+
+After that add the following htaccess rules:
+```
+RewriteCond %{HTTP_ACCEPT} image/webp
+RewriteCond %{REQUEST_FILENAME} (.*)\.(jpg|png)$
+RewriteCond %1\.webp -f
+RewriteRule ^(.*)\.(jpg|png)$ $1.webp [L,T=image/webp,R]
+```
 ## Deployment
 
 Contents of `public` folder need to be deployed to your `source` folder. 
