@@ -1,7 +1,7 @@
 import $ from 'jquery'
 
 export default function () {
-      console.log('init variant selecitons', $('#details #variants .dropdown-menu li a'))
+
        // Variantenauswahl
        $('#variants .dropdown-menu li a').on('click', function (e) {
                e.preventDefault();
